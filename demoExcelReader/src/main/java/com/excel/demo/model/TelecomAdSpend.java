@@ -1,8 +1,14 @@
 package com.excel.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class TelecomAdSpend {
-	
+	@Id
+	@GeneratedValue
+	private int id;
 	private String year;
 	private String total;
 	private String newspaper;
@@ -12,6 +18,12 @@ public class TelecomAdSpend {
 	private String cinema;
 	private String ooh;
 	private String digital;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getYear() {
 		return year;
 	}
@@ -66,9 +78,10 @@ public class TelecomAdSpend {
 	public void setDigital(String digital) {
 		this.digital = digital;
 	}
-	public TelecomAdSpend(String year, String total, String newspaper, String magazine, String tv, String radio,
+	public TelecomAdSpend(int id, String year, String total, String newspaper, String magazine, String tv, String radio,
 			String cinema, String ooh, String digital) {
 		super();
+		this.id = id;
 		this.year = year;
 		this.total = total;
 		this.newspaper = newspaper;
@@ -82,7 +95,7 @@ public class TelecomAdSpend {
 	public TelecomAdSpend() {
 		super();
 	}
-	
+
 	
 	
 }
