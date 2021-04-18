@@ -8,6 +8,15 @@ public class TabResponse {
 	
 	private List<TelecomAdSpend> listAdSpend;
 
+	public TabResponse() {
+		super();
+	}
+
+	public TabResponse(List<TelecomAdSpend> listAdSpend) {
+		super();
+		this.listAdSpend = listAdSpend;
+	}
+
 	public List<TelecomAdSpend> getListAdSpend() {
 		return listAdSpend;
 	}
@@ -16,14 +25,6 @@ public class TabResponse {
 		this.listAdSpend = listAdSpend;
 	}
 
-	public TabResponse(List<TelecomAdSpend> listAdSpend) {
-		super();
-		this.listAdSpend = listAdSpend;
-	}
-
-	public TabResponse() {
-		super();
-	}
 	
 	
 
